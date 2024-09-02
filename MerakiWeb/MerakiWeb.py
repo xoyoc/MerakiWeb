@@ -5,6 +5,8 @@ from MerakiWeb.views.header import header
 from MerakiWeb.views.body import body
 from MerakiWeb.views.our_values import our_values
 from MerakiWeb.views.service import service
+from MerakiWeb.views.vacancies import vacancies
+from MerakiWeb.views.contact import contact
 from MerakiWeb.views.footer import footer
 import MerakiWeb.styles.styles as style
 
@@ -25,6 +27,8 @@ def index() -> rx.Component:
         body(),
         our_values(),
         service(),
+        vacancies(),
+        contact(),
         footer(),
     )
 

@@ -42,7 +42,3 @@ BASE_STYLE={
         "color":COLOR_MERAKI,
     }
 }
-
-
-
-
