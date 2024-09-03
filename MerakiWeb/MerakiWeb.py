@@ -7,6 +7,7 @@ from MerakiWeb.views.our_values import our_values
 from MerakiWeb.views.service import service
 from MerakiWeb.views.vacancies import vacancies
 from MerakiWeb.views.contact import contact
+from MerakiWeb.views.menu import menu
 from MerakiWeb.views.footer import footer
 import MerakiWeb.styles.styles as style
 
@@ -29,6 +30,7 @@ def index() -> rx.Component:
         service(),
         vacancies(),
         contact(),
+        menu(),
         footer(),
     )
 
