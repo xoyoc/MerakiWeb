@@ -10,15 +10,19 @@ from MerakiWeb.views.contact import contact
 from MerakiWeb.views.menu import menu
 from MerakiWeb.views.footer import footer
 import MerakiWeb.styles.styles as style
+from MerakiWeb.config.database import db
+import json
 
 from rxconfig import config
 
+def serializacion(lista):
+    result = list(lista)
+    data = json.loads(json.dumps(result, default=str))
+    return data
 
 class State(rx.State):
-    """The app state."""
-
-    ...
-
+    result = db["vacancies"].find()
+    vacantes = serializacion(result)
 
 def index() -> rx.Component:
     # Welcome Page (Index)
