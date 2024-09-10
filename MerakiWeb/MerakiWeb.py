@@ -34,6 +34,13 @@ def index() -> rx.Component:
         footer(),
     )
 
+def admin() -> rx.Component:
+    return rx.container(
+        header(),
+        rx.text("Escritorio de administrador"),
+        footer(),
+    )
+
 
 app = rx.App(
     stylesheets=[
@@ -41,4 +48,5 @@ app = rx.App(
     ],
     style=style.BASE_STYLE
 )
-app.add_page(index)
+app.add_page(index, route='/')
+app.add_page(admin, route='/admin')

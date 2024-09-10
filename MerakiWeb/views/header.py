@@ -5,7 +5,7 @@ def header() -> rx.Component:
     return rx.container(
         rx.hstack(
             rx.flex(
-                rx.heading("Meraki", size="1",),
+                rx.heading("Meraki"),
                 rx.spacer(),
                 rx.flex(
                     rx.button("Contacto", style=style.buttonMeraki),
