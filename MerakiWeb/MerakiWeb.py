@@ -9,6 +9,7 @@ from MerakiWeb.views.vacancies import vacancies
 from MerakiWeb.views.contact import contact
 from MerakiWeb.views.menu import menu
 from MerakiWeb.views.footer import footer
+from MerakiWeb.dashboard.pages.index import admin
 import MerakiWeb.styles.styles as style
 from MerakiWeb.config.database import db
 import json
@@ -21,8 +22,9 @@ def serializacion(lista):
     return data
 
 class State(rx.State):
-    result = db["vacancies"].find()
-    vacantes = serializacion(result)
+    #resultado = db["vacancies"].find()
+    #vacantes = serializacion(resultado)
+    pass
 
 def index() -> rx.Component:
     # Welcome Page (Index)
@@ -40,9 +42,7 @@ def index() -> rx.Component:
 
 def admin() -> rx.Component:
     return rx.container(
-        header(),
-        rx.text("Escritorio de administrador"),
-        footer(),
+        admin(),
     )
 
 

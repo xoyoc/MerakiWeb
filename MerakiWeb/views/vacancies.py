@@ -1,12 +1,11 @@
 import reflex as rx
 import MerakiWeb.styles.styles as style
 
-def vacancies(data) -> rx.Component:
+def vacancies() -> rx.Component:
     return rx.container(
         rx.center(
             rx.heading("Únete a nuestro equipo", size="8", margin_y=".5em"),
         ),
-        rx.table(data),
         rx.center(
             rx.text("¿Listo para hacer la diferencia? Explora las oportunidades de carrera con nosotros."),
         ),
